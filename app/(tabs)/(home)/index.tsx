@@ -34,7 +34,7 @@ export default function HomeScreen() {
       >
         <View style={styles.header}>
           <Image
-            source={{ uri: 'https://prod-finalquest-user-projects-storage-bucket-aws.s3.amazonaws.com/user-projects/668a1ee9-e010-460e-a019-99d46cf506b5/assets/images/135fb947-8d2d-4e6c-8f0b-25a8882ff3df.jpeg?AWSAccessKeyId=AKIAVRUVRKQJC5DISQ4Q&Signature=oY%2BP42D7%2F0N%2BCqk2ES0P4m01UsU%3D&Expires=1763398080' }}
+            source={require('@/assets/images/6e773e50-3077-42f1-8b07-b4a0828ede31.jpeg')}
             style={styles.logo}
             resizeMode="contain"
           />
@@ -54,11 +54,10 @@ export default function HomeScreen() {
               activeOpacity={0.7}
             >
               <View style={styles.agentIconContainer}>
-                <IconSymbol
-                  ios_icon_name="person.circle.fill"
-                  android_material_icon_name="account_circle"
-                  size={48}
-                  color={colors.text}
+                <Image
+                  source={require('@/assets/images/6e773e50-3077-42f1-8b07-b4a0828ede31.jpeg')}
+                  style={styles.agentIcon}
+                  resizeMode="cover"
                 />
               </View>
               <View style={styles.agentInfo}>
@@ -142,6 +141,17 @@ const styles = StyleSheet.create({
   },
   agentIconContainer: {
     marginRight: 16,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    overflow: 'hidden',
+    backgroundColor: colors.card,
+    borderWidth: 2,
+    borderColor: colors.primary,
+  },
+  agentIcon: {
+    width: '100%',
+    height: '100%',
   },
   agentInfo: {
     flex: 1,
